@@ -75,7 +75,7 @@ public class CurrencyController {
     }
 
     @GetMapping(value = "/units")
-    public ResponseEntity<ServiceResult<List<Unit>>> convert() {
+    public ResponseEntity<ServiceResult<List<Unit>>> units() {
         ServiceResult<List<Unit>> response = currencyService.getUnits();
         if (response.getSuccess())
             return ResponseEntity.ok(response);
